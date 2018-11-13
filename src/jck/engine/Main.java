@@ -6,13 +6,17 @@ package jck.engine;
 
  */
 
+import jck.engine.game.GameLoop;
+
 public class Main {
 
-    public static void main(String[] args) {
-        System.out.println("Hello world");
-        System.out.println("Mike is de slechtse programeur in de galaxy");
+    public static final String VERSION = "0.0.1 pre-aplha";
 
-        System.out.print("test");
+    public static void main(String[] args) {
+        System.out.println("version: " + VERSION);
+
+        GameLoop loop = new GameLoop();
 
     }
+
 }
