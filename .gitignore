@@ -8,4 +8,4 @@
 hs_err_pid*
 .idea
 *.txt
-*.iml
+*.xml
