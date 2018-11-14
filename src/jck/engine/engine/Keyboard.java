@@ -65,7 +65,7 @@ public class Keyboard {
 
 	private static void addAllCharsUS() {
 		ArrayList<Key> keys = new ArrayList<Key>();
-		keys.add(new Key(GLFW.GLFW_KEY_Q, 'q', 'Q', '@'));
+		keys.add(new Key(GLFW.GLFW_KEY_Q, 'q', 'Q'));
 		keys.add(new Key(GLFW.GLFW_KEY_W, 'w', 'W'));
 		keys.add(new Key(GLFW.GLFW_KEY_E, 'e', 'E', '�'));
 		keys.add(new Key(GLFW.GLFW_KEY_R, 'r', 'R'));
