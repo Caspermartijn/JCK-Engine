@@ -34,7 +34,9 @@ public class GameLoop {
 
     private void update(){//In this method the first updates of the frame happens (Player movement/camera updates
         double delta = Display.getDelta();
-        System.out.println("Delta: " + delta);
+
+
+
     }
 
     private void render(){
