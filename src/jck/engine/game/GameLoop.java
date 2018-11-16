@@ -13,10 +13,11 @@ import jck.engine.engine.DisplayBuilder;
 public class GameLoop {
 
     public GameLoop(String title){
-        Display.createDisplay(new DisplayBuilder(1280, 720).setFullscreen(GameSettings.FULLSCREEN).setVsync(GameSettings.VSYNC).setTitle(title));
+        GameSettings.loadSettings();
+        Display.createDisplay(new DisplayBuilder(1920, 1080).setFullscreen(GameSettings.getBoolean("FULLSCREEN")).setVsync(GameSettings.getBoolean("VSYNC")).setTitle(title));
 
         //The underlying loop is the main loop in the game. (In this loop everything happens)
-        while(!Display.isCloseRequested()){
+        while(!Display.isCloseRequested() && !Display.hasToClose()){
             //These two lines updates the display and the display events (keyboard and mouse)
             Display.swapBuffers();
             Display.updateEvents();
@@ -29,6 +30,7 @@ public class GameLoop {
         }
         //Clean-up right here
         Display.disposeDisplay();
+        GameSettings.saveSettings();
     }
 
 

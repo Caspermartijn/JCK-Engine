@@ -86,7 +86,6 @@ public class Display {
 		}
 
 		GLFW.glfwPollEvents();
-
 		Mouse.update();
 	}
 
